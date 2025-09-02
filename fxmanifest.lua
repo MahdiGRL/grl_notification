@@ -2,21 +2,19 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-name 'grl_notification'
-description 'Modular native feed notifications with cross-resource API'
-author 'you'
+author 'Mahdi_GRL'
+description 'Your Resource'
 version '1.0.0'
 
-shared_script 'config.lua'
-server_script 'server/main.lua'
-client_script 'client/main.lua'
-
-exports {
-  -- client-side
-  'Show', 'RemoveByKey', 'SetTheme'
+shared_scripts {
+    'shared/**/*.lua',
+    'config/**/*.lua'
 }
 
-server_exports {
-  -- server-side
-  'Notify', 'Broadcast'
+client_scripts {
+    'client/**/*.lua'
+}
+
+server_scripts {
+    'server/**/*.lua'
 }
